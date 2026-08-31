@@ -215,46 +215,6 @@ U Frida bilan bajariladigan ayrim vazifalarni tayyor buyruqlar orqali osonlashti
 
 ---
 
-## Biz ishlatgan dynamic tahlil
-
-DVBA laboratoriyasida quyidagi vositalar ishlatildi:
-
-```text
-DVBA Android App
-        |
-        v
-Android Emulator
-        |
-        v
-Burp Suite :8080
-        |
-        v
-DVBA Backend
-        |
-        v
-Docker :3000
-```
-
-Backend Docker orqali ishga tushirildi.
-
-Android Emulator ichidagi DVBA ilovasi backend serverga ulandi.
-
-Burp Suite proxy sifatida sozlandi va mobil ilova bilan backend orasidagi HTTP request va response'lar kuzatildi.
-
-Ushlangan requestlardan misollar:
-
-```text
-GET  /api/health/check
-POST /api/user/register
-POST /api/user/login
-POST /api/balance/view
-POST /api/beneficiary/add
-POST /api/user/profile
-POST /api/user/change-password
-```
-
----
-
 ## Xulosa
 
 Dynamic analysis mobil ilovani real ishlayotgan paytda tekshirish imkonini beradi.
